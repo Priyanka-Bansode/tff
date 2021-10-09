@@ -1,3 +1,8 @@
+provider "aws" {
+  region     = var.region
+  }
+
+
 resource "aws_vpc" "first" {
   cidr_block       = "70.70.0.0/16"
   instance_tenancy = "default"
