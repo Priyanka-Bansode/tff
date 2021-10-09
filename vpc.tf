@@ -1,4 +1,4 @@
-resource "aws_vpc" "demo" {
+resource "aws_vpc" "demo123" {
   cidr_block       = "70.70.0.0/16"
   instance_tenancy = "default"
 
