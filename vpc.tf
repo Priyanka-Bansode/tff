@@ -26,19 +26,19 @@ resource "aws_subnet" "demo2" {
     Name = "subnet2"
   }
 }
-resource "aws_internet_gateway" "massgw" {
+resource "aws_internet_gateway" "intdemo" {
   vpc_id = "$(aws_vpc.first.id)"
 
   tags = {
     Name = "mass"
   }
 }
-resource "aws_route_table" "Pu_RT" {
+resource "aws_route_table" "Public-RT" {
   vpc_id = "$(aws_vpc.first.id)"
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.massgw.id
+    gateway_id = aws_internet_gateway.intdemo.id
   }
 
   tags = {
