@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "b123" {
+resource "aws_s3_bucket" {
   bucket = "myterrabucket123"
   acl    = "private"
 
